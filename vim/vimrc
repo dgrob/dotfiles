@@ -1,0 +1,45 @@
+" pathogen
+call pathogen#infect()
+call pathogen#helptags()
+
+" COLORS
+syntax on
+set background=dark
+colorscheme solarized
+
+" GENERAL
+set autoindent
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+
+" line numbers
+set number
+
+" automatically remove trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+" white space, line endings
+set list listchars=tab:»·,trail:·
+
+" MAPPINGS
+let mapleader = ","
+
+nmap <Leader>tt :tabnew<CR>
+nmap <Leader>tc :tabclose<CR>
+nmap <Leader>to :tabonly<CR>
+nmap <Leader>tn :tabnext<CR>
+nmap <Leader>tp :tabprevious<CR>
+nmap <Leader>tf :tabfirst<CR>
+nmap <Leader>tl :tablast<CR>
+nmap <Leader>tm :tabmove
+
+nnoremap <silent> <Leader>f :CommandT<CR>
+
+
+" GUI STUFF
+if has('gui_running')
+    set guioptions-=T
+    set guifont=Andale\ Mono:h12
+endif
