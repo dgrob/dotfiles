@@ -26,7 +26,9 @@ set list listchars=tab:»·,trail:·
 " MAPPINGS
 let mapleader = ","
 
-nmap <Leader>tt :tabnew<CR>
+nnoremap <silent> <Leader>f :CommandT<CR>
+
+nmap <Leader>tt :tabnew <CR><Leader>f
 nmap <Leader>tc :tabclose<CR>
 nmap <Leader>to :tabonly<CR>
 nmap <Leader>tn :tabnext<CR>
@@ -35,7 +37,6 @@ nmap <Leader>tf :tabfirst<CR>
 nmap <Leader>tl :tablast<CR>
 nmap <Leader>tm :tabmove
 
-nnoremap <silent> <Leader>f :CommandT<CR>
 
 
 " GUI STUFF
